@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-const PageOfStart = (temp) => {
-    temp('red');
-    return <div>Start Wash Park Birds</div>;
+class PageOfStart  extends React.Component {
+    /*constructor(props) {
+        super(props);
+        //possibly add option to wipe state clean if on start page
+    }*/
+    
+render(){
+    return (
+        <div>
+            <Link to="/size">Navigate To Size Page</Link>
+        </div>
+    );
+    }
 };
 
 export default PageOfStart;

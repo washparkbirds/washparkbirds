@@ -1,18 +1,16 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import PageOfStart from './RouterComponents/PageOfStart';
 import PageOfSizeSelection from './RouterComponents/PageOfSizeSelection';
 
-const PageOfStart = () => {
-  return <div>redd</div>;
-};
 
 
 class App extends React.Component {
   
   constructor(props) {
     super(props);
-    this.state = {color: null};
+    this.state = {color: 'blue', size: 'largest'};
 
     this.setColorChoice = this.setColorChoice.bind(this);
     this.setSizeChoice = this.setSizeChoice.bind(this);
@@ -30,11 +28,6 @@ class App extends React.Component {
   setBirdChoice(birdChoice){
     this.setState({bird : birdChoice});
   }
-  
-  componentDidMount(){
- 
-  }
-
   
   render(){
     return (
