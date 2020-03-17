@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
+import BirdSize from '../components/BirdSize';
 
 class PageOfSizeSelection  extends React.Component {
     constructor(props) {
         super(props);
-        props.setSizeChoice("largestsss");
     }
     
     
 render(){
-    return <div>size</div>;
+    return <BirdSize setSizeChoice = {this.props.setSizeChoice}></BirdSize>;
     }
 };
 
