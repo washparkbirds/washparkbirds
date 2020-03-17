@@ -1,6 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import PageOfSizeSelection from './RouterComponents/PageOfSizeSelection';
+
+const PageOfStart = () => {
+  return <div>redd</div>;
+};
+
 
 class App extends React.Component {
   
@@ -26,30 +32,17 @@ class App extends React.Component {
   }
   
   componentDidMount(){
-    this.setColorChoice('red');
-    this.setSizeChoice('small');
-    this.setBirdChoice('robin');
-    this.setColorChoice('blue');
+ 
   }
 
   
   render(){
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload NEW.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <BrowserRouter>
+        <Route path="/" exact component={PageOfStart}/>
+        <Route path="/size" exact render={(props) => <PageOfSizeSelection setSizeChoice={this.setSizeChoice} />} />
+      </BrowserRouter>
       </div>
     );
   }
