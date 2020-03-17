@@ -5,7 +5,6 @@ import PageOfStart from './RouterComponents/PageOfStart';
 import PageOfSizeSelection from './RouterComponents/PageOfSizeSelection';
 
 
-
 class App extends React.Component {
   
   constructor(props) {
