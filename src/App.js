@@ -3,6 +3,8 @@ import './App.css';
 import { BrowserRouter, Route} from 'react-router-dom';
 import PageOfStart from './RouterComponents/PageOfStart';
 import PageOfSizeSelection from './RouterComponents/PageOfSizeSelection';
+import PageOfColorSelection from './RouterComponents/PageOfColorSelection';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -36,6 +38,7 @@ class App extends React.Component {
       <BrowserRouter>
         <Route path="/" exact component={PageOfStart}/>
         <Route path="/size" exact render={(props) => <PageOfSizeSelection setSizeChoice={this.setSizeChoice} />} />
+        <Route path="/color" exact render={(props) => <PageOfColorSelection setColorChoice={this.setColorChoice} />} />
       </BrowserRouter>
       </div>
     );

@@ -13,7 +13,7 @@ class PageOfSizeSelection  extends React.Component {
         this.birdSizeLoop = this.birdSizeLoop.bind(this);
     
     }
-    birdSizeLoop(sizesArray){
+    birdSizeLoop(){
         var sizes = ['small', 'medium', 'large'];
         sizes = sizes.map(size => {return (<BirdSize chosenSize={size} setSizeChoice={this.props.setSizeChoice}></BirdSize>)});
         return sizes;
@@ -25,8 +25,6 @@ render(){
 
     return (
         this.birdSizeLoop()
-    
-        
     );
     }
 };
