@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route} from 'react-router-dom';
 import PageOfStart from './RouterComponents/PageOfStart';
 import PageOfSizeSelection from './RouterComponents/PageOfSizeSelection';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 class App extends React.Component {
