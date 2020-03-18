@@ -10,18 +10,23 @@ import Col from 'react-bootstrap/Col';
 class PageOfSizeSelection  extends React.Component {
     constructor(props) {
         super(props);
-        var sizes = ['small', 'medium', 'large'];
-    }
+        this.birdSizeLoop = this.birdSizeLoop.bind(this);
     
+    }
+    birdSizeLoop(sizesArray){
+        var sizes = ['small', 'medium', 'large'];
+        sizes = sizes.map(size => {return (<BirdSize chosenSize={size} setSizeChoice={this.props.setSizeChoice}></BirdSize>)});
+        return sizes;
+    }
     
     //return <BirdSize setSizeChoice = {this.props.setSizeChoice}></BirdSize>;
     
 render(){
 
     return (
-        <div>
-        <BirdSize chosenSize="greg" setSizeChoice={this.props.setSizeChoice}></BirdSize>
-        </div>
+        this.birdSizeLoop()
+    
+        
     );
     }
 };

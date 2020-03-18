@@ -8,7 +8,7 @@ class BirdSize extends React.Component {
     }
     
 render(){
-    return <div onClick={() => this.props.setSizeChoice(this.props.chosenSize)}>size!</div>;
+    return <div onClick={() => this.props.setSizeChoice(this.props.chosenSize)}>{this.props.chosenSize}</div>;
     }
 };
 
