@@ -1,32 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ColorCard from '../components/ColorCard';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+
+const colors = ['red', 'blue', 'green', 'yellow', 'orange', 'gray', 'black', 'brown'];
 
 
-class PageOfSizeSelection  extends React.Component {
-    constructor(props) {
-        super(props);
-        this.birdSizeLoop = this.colorCardLoop.bind(this);
-    
+function PageOfColorSelection(props) {
+
+    const { setColorChoice, getColorChoice, ...rest } = props;
+
+    function colorCardLoop(){
+        var colorsArray = colors.map(color => {return (<ColorCard chosenColor={color} key={color} getColorChoice={getColorChoice} setColorChoice={setColorChoice}></ColorCard>)});
+        return colorsArray;
     }
-    colorCardLoop(){
-        var colors = ['red', 'blue', 'green', 'yellow', 'orange', 'gray', 'black', 'brown'];
-        colors = colors.map(color => {return (<ColorCard chosenColor={color} setColorChoice={this.props.setColorChoice}></ColorCard>)});
-        return colors;
-    }
-    
-    //return <BirdSize setSizeChoice = {this.props.setSizeChoice}></BirdSize>;
-    
-render(){
 
     return (
-        this.colorCardLoop()
+        colorCardLoop()
     );
-    }
 };
 
-export default PageOfSizeSelection;
+export default PageOfColorSelection;
