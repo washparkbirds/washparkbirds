@@ -13,21 +13,23 @@
         root: {
 
             outline: 0,
-            borderSize: '1px',
             borderColor: props => props.cColor === "yellow" ? "#D3B53D" : props.cColor,
-            background: 'white',
+            background: props => props.cColor === "yellow" ? "#D3B53D" : props.cColor,
             minWidth: '100%',
-            minHeight: '6em',
+            minHeight: '2em',
             margin: 0,
             padding: 0,
-            fontSize: '2em',
-            textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
-            color: props => props.cColor === "yellow" ? "#D3B53D" : props.cColor,
+            fontSize: '5em',
+            textShadow: '-1px -1px 0 #282828, 1px -1px 0 #282828, -1px 1px 0 #282828, 1px 1px 0 #282828',
+            color: 'white',
             
             "&:focus": {
                 background:  props => props.cColor === "yellow" ? "#D3B53D" : props.cColor,
                 color: '#FFFFFF',
                 outline: "0 !important",
+                },
+            "&:hover": {
+                color: props => props.cColor === "yellow" ? "#D3B53D" : props.cColor,
                 },
         },
 
@@ -40,7 +42,7 @@
 
         icon: {
             //different scope here!!
-            fontSize: '4em',
+            fontSize: '2em',
             color: props => props.chosenColor === "white" ? "black" : "white"
         }
     });
