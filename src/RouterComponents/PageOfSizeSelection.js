@@ -14,15 +14,9 @@ function PageOfSizeSelection(props) {
     function birdSizeLoop(){
         var sizesArray = sizes.map(size => {
             return (
-            <React.Fragment>
-                <Grid item xs={1} sm={1} lg={2}>
-                </Grid>
-                <Grid item xs={10} sm={10} lg={8}>
+                <Grid item xs={12} sm={6} lg={4}>
                     <BirdSize chosenSize={size} key={size} getSizeChoice={getSizeChoice} setSizeChoice={setSizeChoice}></BirdSize>
                 </Grid>
-                <Grid item xs={1} sm={1} lg={2}>
-                </Grid>
-            </React.Fragment>
             )
         });
         return sizesArray;
