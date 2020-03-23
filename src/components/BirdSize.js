@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import CheckIcon from '@material-ui/icons/Check';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
     root: {
@@ -60,7 +61,19 @@ export default function AdaptingHook(props) {
 return (
     <Paper className={classes.paper} elevation={4}>
         <BirdSize onBlur={ () => {setCurrSizeChoice(null);}} cSize={props.chosenSize} disabled={props.chosenSize === props.getSizeChoice()} onClick={ () => {props.setSizeChoice(props.chosenSize); setCurrSizeChoice(props.chosenSize)}}>
-            {props.chosenSize === currSizeChoice ? <CheckIcon color="{}" className={classes.icon}/> : props.chosenSize}
+            {
+            <Grid  container
+            direction="column"
+            justify="space-evenly"
+            alignItems="center">
+                <Grid item xs={12} sm={12} lg={12}>
+                    <img src={"public\images\\" + "large.png"} alt={props.chosenSize + " bird"}></img>
+                </Grid>
+                <Grid item xs={12} sm={12} lg={12}>
+                    {props.chosenSize === currSizeChoice ? <CheckIcon color="{}" className={classes.icon}/> : props.chosenSize}
+                </Grid>
+            </Grid>
+            }
         </BirdSize>
     </Paper>
 
