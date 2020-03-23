@@ -15,11 +15,9 @@ function PageOfColorSelection(props) {
         var colorsArray = colors.map(color => {
             return (
                 <React.Fragment>
-               
-                <Grid item xs={10} sm={6} lg={4}>
+                <Grid item xs={12} sm={6} lg={4}>
                     <ColorCard chosenColor={color} key={color} getColorChoice={getColorChoice} setColorChoice={setColorChoice}></ColorCard>
                 </Grid>
-         
             </React.Fragment>
             )
         });
