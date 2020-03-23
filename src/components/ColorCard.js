@@ -19,7 +19,7 @@
             minHeight: '2em',
             margin: 0,
             padding: 0,
-            fontSize: '5em',
+            fontSize: '4em',
             textShadow: '-1px -1px 0 #282828, 1px -1px 0 #282828, -1px 1px 0 #282828, 1px 1px 0 #282828',
             color: 'white',
             
