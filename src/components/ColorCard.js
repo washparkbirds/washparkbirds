@@ -22,11 +22,11 @@
             padding: 0,
             fontSize: '4em',
             textShadow: '-1px -1px 0 #404040, 1px -1px 0 #404040, -1px 1px 0 #404040, 1px 1px 0 #404040',
-            color: '#F0F0F0',
+            color: '#FFFFFF',
             
             "&:focus": {
                 background:  props => props.cColor === "yellow" ? "#D3B53D" : props.cColor,
-                color: '#F0F0F0',
+                color: '#FFFFFF',
                 outline: "0 !important",
                 },
         },
