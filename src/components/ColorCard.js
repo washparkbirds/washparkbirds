@@ -13,14 +13,16 @@
         root: {
 
             outline: 0,
-            background:  props => props.cColor === "yellow" ? "#D3B53D" : props.cColor,
+            borderSize: '1px',
+            borderColor: props => props.cColor === "yellow" ? "#D3B53D" : props.cColor,
+            background: 'white',
             minWidth: '100%',
             minHeight: '6em',
             margin: 0,
             padding: 0,
             fontSize: '2em',
-            textShadow: '-1px -1px 0 #404040, 1px -1px 0 #404040, -1px 1px 0 #404040, 1px 1px 0 #404040',
-            color: '#FFFFFF',
+            textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
+            color: props => props.cColor === "yellow" ? "#D3B53D" : props.cColor,
             
             "&:focus": {
                 background:  props => props.cColor === "yellow" ? "#D3B53D" : props.cColor,
