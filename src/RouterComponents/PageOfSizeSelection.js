@@ -33,7 +33,7 @@ function PageOfSizeSelection(props) {
     return (
         <Grid container
         direction="row"
-        justify="space-evenly"
+        justify="center"
         alignItems="center" spacing={0}>
             {birdSizeLoop()}
             <Link to="/color">Navigate To color Page</Link>

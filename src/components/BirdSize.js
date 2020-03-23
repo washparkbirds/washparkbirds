@@ -18,10 +18,10 @@ const useStyles = makeStyles({
         outline: 0,
         //background:  props => props.cColor === "yellow" ? "#D3B53D" : props.cColor,
         minWidth: '100%',
-        minHeight: '4em',
+        minHeight: '8em',
         margin: 0,
         padding: 0,
-        fontSize: '4em',
+        fontSize: '2em',
         textShadow: '-1px -1px 0 #404040, 1px -1px 0 #404040, -1px 1px 0 #404040, 1px 1px 0 #404040',
         color: '#FFFFFF',
         padding: '.5em',
@@ -36,14 +36,14 @@ const useStyles = makeStyles({
     paper: {
         marginLeft: '1em',
         marginRight: '1em',
-        marginTop: '1em',
-        marginBottom: '1em',
+        marginTop: '.65em',
+        marginBottom: '.65em',
     },
 
     icon: {
         //different scope here!!
-        fontSize: '4em',
-        color: props => props.chosenColor === "white" ? "black" : "white"
+        fontSize: '2em',
+        color: 'gray',
     }
 });
 
