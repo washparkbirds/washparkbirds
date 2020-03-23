@@ -25,6 +25,8 @@
             color: '#F0F0F0',
             
             "&:focus": {
+                background:  props => props.cColor === "yellow" ? "#D3B53D" : props.cColor,
+                color: '#F0F0F0',
                 outline: "0 !important",
                 },
         },
