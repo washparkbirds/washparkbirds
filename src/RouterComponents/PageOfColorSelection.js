@@ -2,7 +2,6 @@ import React from 'react';
 import ColorCard from '../components/ColorCard';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 
 
 

@@ -26,7 +26,7 @@ class App extends React.Component {
     this.setColorChoice = this.setColorChoice.bind(this);
     this.setSizeChoice = this.setSizeChoice.bind(this);
     this.setBirdChoice = this.setBirdChoice.bind(this);
-
+    this.getSizeChoice = this.getSizeChoice.bind(this);
     this.getColorChoice = this.getColorChoice.bind(this);
 
   }
@@ -43,6 +43,10 @@ class App extends React.Component {
     this.setState({size : sizeChoice});
   }
 
+  getSizeChoice(){
+    return this.state.size;
+  }
+
   setBirdChoice(birdChoice){
     this.setState({bird : birdChoice});
   }
@@ -53,8 +57,8 @@ class App extends React.Component {
       <div className="App">
       <BrowserRouter>
         <Route path="/" exact component={PageOfStart}/>
-        <Route path="/size" exact render={(props) => <PageOfSizeSelection setSizeChoice={this.setSizeChoice} />} />
         <Route path="/color" exact render={(props) => <PageOfColorSelection colorList={this.state.colorList} getColorChoice={this.getColorChoice} setColorChoice={this.setColorChoice} />} />
+        <Route path="/size" exact render={(props) => <PageOfSizeSelection sizeList={this.state.sizeList} getSizeChoice={this.getSizeChoice} setSizeChoice={this.setSizeChoice} />} />
         <Route path="/bird" exact render={(props) => <PageOfBirdSelection getBirdChoice={this.getBirdChoice} setBirdChoice={this.setBirdChoice} />} />
       </BrowserRouter>
       </div>

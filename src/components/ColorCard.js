@@ -1,5 +1,3 @@
-
-    //return <div onClick={ () => this.props.setColorChoice(this.props.chosenColor) }>{this.props.chosenColor}</div>;
     import React from 'react';
     import PropTypes from 'prop-types';
     import { makeStyles } from '@material-ui/core/styles';
@@ -68,7 +66,7 @@
     return (
         <Paper className={classes.paper} elevation={4}>
             <ColorButton onBlur={ () => {setCurrColorChoice(null);}} cColor={props.chosenColor} disabled={props.chosenColor === props.getColorChoice()} onClick={ () => {props.setColorChoice(props.chosenColor); setCurrColorChoice(props.chosenColor)}}>
-                {props.chosenColor === currColorChoice ? <CheckIcon color="{}" className={classes.icon}/> : props.chosenColor}
+                {props.chosenColor === currColorChoice ? <CheckIcon className={classes.icon}/> : props.chosenColor}
             </ColorButton>
         </Paper>
 
