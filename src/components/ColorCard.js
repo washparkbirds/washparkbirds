@@ -15,10 +15,10 @@
             outline: 0,
             background:  props => props.cColor === "yellow" ? "#D3B53D" : props.cColor,
             minWidth: '100%',
-            minHeight: '4em',
+            minHeight: '6em',
             margin: 0,
             padding: 0,
-            fontSize: '4em',
+            fontSize: '2em',
             textShadow: '-1px -1px 0 #404040, 1px -1px 0 #404040, -1px 1px 0 #404040, 1px 1px 0 #404040',
             color: '#FFFFFF',
             
@@ -34,7 +34,6 @@
             marginRight: '1em',
             marginTop: '1em',
             marginBottom: '1em',
-
         },
 
         icon: {
