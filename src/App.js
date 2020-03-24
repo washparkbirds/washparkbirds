@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import PageOfStart from './RouterComponents/PageOfStart';
 import PageOfSizeSelection from './RouterComponents/PageOfSizeSelection';
 import PageOfColorSelection from './RouterComponents/PageOfColorSelection';
 import PageOfBirdSelection from './RouterComponents/PageOfBirdSelection';
-
+import BottomNav from './components/BottomNav';
+import {useHistory} from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -56,10 +57,12 @@ class App extends React.Component {
     return (
       <div className="App">
       <BrowserRouter>
+        <Switch>
         <Route path="/" exact component={PageOfStart}/>
         <Route path="/color" exact render={(props) => <PageOfColorSelection colorList={this.state.colorList} getColorChoice={this.getColorChoice} setColorChoice={this.setColorChoice} />} />
         <Route path="/size" exact render={(props) => <PageOfSizeSelection sizeList={this.state.sizeList} getSizeChoice={this.getSizeChoice} setSizeChoice={this.setSizeChoice} />} />
         <Route path="/bird" exact render={(props) => <PageOfBirdSelection getBirdChoice={this.getBirdChoice} setBirdChoice={this.setBirdChoice} />} />
+        </Switch>
       </BrowserRouter>
       </div>
     );

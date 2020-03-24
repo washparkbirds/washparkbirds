@@ -2,6 +2,7 @@ import React from 'react';
 import BirdSize from '../components/BirdSize';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
+import BottomNav from '../components/BottomNav';
 
 
 function PageOfSizeSelection(props) {
@@ -32,6 +33,8 @@ function PageOfSizeSelection(props) {
         alignItems="center" spacing={0}>
             {birdSizeLoop()}
         </Grid>
+        <BottomNav></BottomNav>
+
         <Link to="/color">Navigate To color Page</Link>
         </React.Fragment>
     );

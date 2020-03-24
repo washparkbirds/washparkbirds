@@ -11,6 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import Large from '../images/large.png';
 import Medium from '../images/medium.png';
 import Small from '../images/small.png';
+import {useHistory} from 'react-router-dom'
 
 const useStyles = makeStyles({
     root: {
@@ -70,14 +71,20 @@ function BirdSize(props) {
 
 export default function AdaptingHook(props) {
     const [currSizeChoice, setCurrSizeChoice] = useState(null);
-
     const { cSize, disabled, ...other } = props;
+    const history = useHistory();
 
     const classes = useStyles(props);
+
+    function clickFun(){
+        setTimeout(() => history.push('/color'), 650);
+        
+    }
+
     //console.log(props.getColorChoice())
 return (
     <Paper className={classes.paper} elevation={4}>
-        <BirdSize onBlur={ () => {setCurrSizeChoice(null);}} cSize={props.chosenSize} disabled={props.chosenSize === props.getSizeChoice()} onClick={ () => {props.setSizeChoice(props.chosenSize); setCurrSizeChoice(props.chosenSize)}}>
+        <BirdSize onBlur={ () => {setCurrSizeChoice(null);}} cSize={props.chosenSize} disabled={props.chosenSize === props.getSizeChoice()} onClick={ () => {clickFun(); setCurrSizeChoice(props.chosenSize)}}>
             {
             <Grid  container
             direction="column"
