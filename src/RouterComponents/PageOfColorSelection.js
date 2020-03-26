@@ -2,6 +2,7 @@ import React from 'react';
 import ColorCard from '../components/ColorCard';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography'
 
 
 
@@ -23,12 +24,15 @@ function PageOfColorSelection(props) {
     }
 
     return (
+        <React.Fragment>
+            <Typography variant="h5" component="h2" align="center" gutterBottom={true} display="block">Please choose one color:</Typography>
         <Grid container
         direction="row"
         justify="space-evenly"
         alignItems="center" spacing={0}>
             {colorCardLoop()}
         </Grid>
+        </React.Fragment>
         
     );
 };

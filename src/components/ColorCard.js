@@ -6,7 +6,8 @@
     import Typography from '@material-ui/core/Typography';
     import CheckIcon from '@material-ui/icons/Check';
     import { useState } from 'react';
-    import { withRouter } from 'react-router-dom';
+    import {useHistory} from 'react-router-dom';
+
 
     
     
@@ -62,14 +63,22 @@
 
     export default function AdaptingHook(props) {
         const [currColorChoice, setCurrColorChoice] = useState(null);
-
         const { cColor, disabled, ...other } = props;
+        const history = useHistory();
 
         const classes = useStyles(props);
+    
+        function clickFun(){
+            //will nav to bird selection
+            props.setColorChoice(props.chosenColor);
+            setCurrColorChoice(props.chosenColor);
+            setTimeout(() => history.push('/'), 650);
+            
+        }
         //console.log(props.getColorChoice())
     return (
         <Paper className={classes.paper} elevation={4}>
-            <ColorButton onBlur={ () => {setCurrColorChoice(null);}} cColor={props.chosenColor} disabled={props.chosenColor === props.getColorChoice()} onClick={ () => {props.setColorChoice(props.chosenColor); setCurrColorChoice(props.chosenColor)}}>
+            <ColorButton onBlur={ () => {setCurrColorChoice(null);}} cColor={props.chosenColor} disabled={props.chosenColor === props.getColorChoice()} onClick={() => clickFun() }>
                 {props.chosenColor === currColorChoice ? <CheckIcon className={classes.icon}/> : props.chosenColor}
             </ColorButton>
         </Paper>
