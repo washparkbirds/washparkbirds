@@ -12,7 +12,6 @@ render(){
         <div>
             <Link to="/size">Navigate To Size Page</Link>
             <br></br>
-            <Link to="/color">Navigate To Color Page</Link>
 
         </div>
     );
