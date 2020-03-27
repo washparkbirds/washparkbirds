@@ -16,10 +16,18 @@ function PageOfSizeSelection(props) {
     const useStyles = makeStyles(theme => ({
         root: {
         flexGrow: 1,
+
         },
     
         title: {
         flexGrow: 1,
+        },
+        appBar: {
+            top: 'auto',
+            bottom: 0,
+        },
+        buffer:{
+            paddingBottom: 50,
         },
     }));
 
@@ -48,7 +56,7 @@ function PageOfSizeSelection(props) {
     return (
         <React.Fragment>
             <div className={classes.root}>
-                <AppBar position="sticky">
+                <AppBar position="fixed" className={classes.appBar}>
                     <Toolbar>
                     <Button className={classes.title} color="inherit" onClick={() => history.goBack()}>Back</Button>
 
@@ -59,7 +67,7 @@ function PageOfSizeSelection(props) {
                 </AppBar>
     </div>
         <Typography variant="h5" component="h2" align="center" gutterBottom={true} display="block">Please choose the bird's size:</Typography>
-        <Grid container
+        <Grid  className={classes.buffer} container
         direction="row"
         justify="center"
         alignItems="center" spacing={0}>
