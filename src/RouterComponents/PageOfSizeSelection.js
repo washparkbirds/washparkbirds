@@ -60,8 +60,6 @@ function PageOfSizeSelection(props) {
         alignItems="center" spacing={0}>
             {birdSizeLoop()}
         </Grid>
-        <BottomNav></BottomNav>
-
         <Link to="/color">Navigate To color Page</Link>
         </React.Fragment>
     );
