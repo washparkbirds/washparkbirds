@@ -5,8 +5,6 @@ import PageOfStart from './RouterComponents/PageOfStart';
 import PageOfSizeSelection from './RouterComponents/PageOfSizeSelection';
 import PageOfColorSelection from './RouterComponents/PageOfColorSelection';
 import PageOfBirdSelection from './RouterComponents/PageOfBirdSelection';
-import BottomNav from './components/BottomNav';
-import {useHistory} from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
