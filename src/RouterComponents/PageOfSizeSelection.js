@@ -8,23 +8,27 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import {useHistory} from 'react-router-dom';
 
 
 function PageOfSizeSelection(props) {
 
-    const sizes = props.sizeList;
-
-    const { setSizeChoice, getSizeChoice} = props;
-
     const useStyles = makeStyles(theme => ({
         root: {
-          flexGrow: 1,
+        flexGrow: 1,
         },
-      
+    
         title: {
-          flexGrow: 1,
+        flexGrow: 1,
         },
-      }));
+    }));
+
+    const sizes = props.sizeList;
+    const classes = useStyles();
+    const history = useHistory();
+    const { setSizeChoice, getSizeChoice} = props;
+
+
 
     function birdSizeLoop(){
         var sizesArray = sizes.map(size => {
@@ -38,20 +42,21 @@ function PageOfSizeSelection(props) {
     }
     
     //return <BirdSize setSizeChoice = {this.props.setSizeChoice}></BirdSize>;
-    const classes = useStyles();
+  
+
 
     return (
         <React.Fragment>
             <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-           <Button className={classes.title} color="inherit">Login</Button>
+                <AppBar position="sticky">
+                    <Toolbar>
+                    <Button className={classes.title} color="inherit" onClick={() => history.goBack()}>Back</Button>
 
-          <Button className={classes.title} color="inherit">Login</Button>
+                    <Button className={classes.title} color="inherit">Restart</Button>
 
-          <Button className={classes.title} color="inherit" >Login</Button>
-        </Toolbar>
-      </AppBar>
+                    <Button className={classes.title} color="inherit" onClick={() => history.push('/color')} >Next</Button>
+                    </Toolbar>
+                </AppBar>
     </div>
         <Typography variant="h5" component="h2" align="center" gutterBottom={true} display="block">Please choose the bird's size:</Typography>
         <Grid container

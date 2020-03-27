@@ -26,13 +26,14 @@ function PageOfColorSelection(props) {
     return (
         <React.Fragment>
             <Typography variant="h5" component="h2" align="center" gutterBottom={true} display="block">Please choose one color:</Typography>
-        <Grid container
-        direction="row"
-        justify="space-evenly"
-        alignItems="center" spacing={0}>
-            {colorCardLoop()}
-        </Grid>
+            <Grid container
+            direction="row"
+            justify="space-evenly"
+            alignItems="center" spacing={0}>
+                {colorCardLoop()}
+            </Grid>
         </React.Fragment>
+
         
     );
 };
