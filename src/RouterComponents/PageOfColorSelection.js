@@ -3,12 +3,22 @@ import ColorCard from '../components/ColorCard';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography'
+import TopAppBar from '../components/TopAppBar'
+import { makeStyles } from '@material-ui/core/styles';
 
 
 
 function PageOfColorSelection(props) {
 
     const colors = props.colorList;
+    const useStyles = makeStyles(theme => ({
+
+        bufferBar:{
+            paddingTop: 80,
+        },
+
+    }));
+    const classes = useStyles();
 
     const { setColorChoice, getColorChoice, ...rest } = props;
 
@@ -25,7 +35,8 @@ function PageOfColorSelection(props) {
 
     return (
         <React.Fragment>
-            <Typography variant="h5" component="h2" align="center" gutterBottom={true} display="block">Please choose one color:</Typography>
+            <TopAppBar title="Bird Color"></TopAppBar>
+            <Typography className={classes.bufferBar} variant="h5" component="h2" align="center" gutterBottom={true} display="block">Please choose one color:</Typography>
             <Grid container
             direction="row"
             justify="space-evenly"

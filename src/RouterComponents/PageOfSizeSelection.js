@@ -2,38 +2,24 @@ import React from 'react';
 import BirdSize from '../components/BirdSize';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-import BottomNav from '../components/BottomNav';
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
-import {useHistory} from 'react-router-dom';
+import TopAppBar from '../components/TopAppBar'
+
 
 
 function PageOfSizeSelection(props) {
 
     const useStyles = makeStyles(theme => ({
-        root: {
-        flexGrow: 1,
 
+        bufferBar:{
+            paddingTop: 80,
         },
-    
-        title: {
-        flexGrow: 1,
-        },
-        appBar: {
-            top: 'auto',
-            bottom: 0,
-        },
-        buffer:{
-            paddingBottom: 50,
-        },
+
     }));
 
     const sizes = props.sizeList;
     const classes = useStyles();
-    const history = useHistory();
     const { setSizeChoice, getSizeChoice} = props;
 
 
@@ -50,30 +36,19 @@ function PageOfSizeSelection(props) {
     }
     
     //return <BirdSize setSizeChoice = {this.props.setSizeChoice}></BirdSize>;
-  
+
 
 
     return (
         <React.Fragment>
-            <div className={classes.root}>
-                <AppBar position="fixed" className={classes.appBar}>
-                    <Toolbar>
-                    <Button className={classes.title} color="inherit" onClick={() => history.goBack()}>Back</Button>
-
-                    <Button className={classes.title} color="inherit">Restart</Button>
-
-                    <Button className={classes.title} color="inherit" onClick={() => history.push('/color')} >Next</Button>
-                    </Toolbar>
-                </AppBar>
-    </div>
-        <Typography variant="h5" component="h2" align="center" gutterBottom={true} display="block">Please choose the bird's size:</Typography>
-        <Grid  className={classes.buffer} container
-        direction="row"
-        justify="center"
-        alignItems="center" spacing={0}>
-            {birdSizeLoop()}
-        </Grid>
-        <Link to="/color">Navigate To color Page</Link>
+            <TopAppBar title="Bird Size"></TopAppBar>
+            <Typography className={classes.bufferBar}variant="h5" component="h2" align="center" gutterBottom={true} display="block">Please choose the bird's size:</Typography>
+            <Grid  container
+            direction="row"
+            justify="center"
+            alignItems="center" spacing={0}>
+                {birdSizeLoop()}
+            </Grid>
         </React.Fragment>
     );
 
