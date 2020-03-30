@@ -17,9 +17,10 @@ class App extends React.Component {
     this.state = {
       color: null,
       size: null,
+      birdChoice: null,
       colorList: ['red', 'blue', 'green', 'yellow', 'orange', 'gray', 'black', 'brown', 'white'],
       sizeList: ['small', 'medium', 'large'],
-      /*birdList : resultsOfBirdLoop,*/
+      birdList : [{bird: "robin", color: "red",}, {bird: "bluejay", color: "blue"}], //put json data array here
     };
 
     this.setColorChoice = this.setColorChoice.bind(this);
@@ -49,6 +50,10 @@ class App extends React.Component {
   setBirdChoice(birdChoice){
     this.setState({bird : birdChoice});
   }
+
+  getBirdChoice(birdChoice){
+    return this.state.birdChoice
+  }
   
   // add header about router?
   render(){
@@ -59,7 +64,7 @@ class App extends React.Component {
         <Route path="/" exact component={PageOfStart}/>
         <Route path="/color" exact render={(props) => <PageOfColorSelection colorList={this.state.colorList} getColorChoice={this.getColorChoice} setColorChoice={this.setColorChoice} />} />
         <Route path="/size" exact render={(props) => <PageOfSizeSelection sizeList={this.state.sizeList} getSizeChoice={this.getSizeChoice} setSizeChoice={this.setSizeChoice} />} />
-        <Route path="/bird" exact render={(props) => <PageOfBirdSelection getBirdChoice={this.getBirdChoice} setBirdChoice={this.setBirdChoice} />} />
+        <Route path="/bird" exact render={(props) => <PageOfBirdSelection birdList={this.state.birdList} getBirdChoice={this.getBirdChoice} setBirdChoice={this.setBirdChoice} />} />
         </Switch>
       </BrowserRouter>
       </div>
