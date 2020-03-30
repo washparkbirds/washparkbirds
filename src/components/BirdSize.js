@@ -8,9 +8,6 @@ import CheckIcon from '@material-ui/icons/Check';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-import Large from '../images/large.png';
-import Medium from '../images/medium.png';
-import Small from '../images/small.png';
 import {useHistory} from 'react-router-dom';
 
 const useStyles = makeStyles({
@@ -48,7 +45,8 @@ const useStyles = makeStyles({
     }
 });
 
-function imageServe(size){
+//found better solution
+/*function imageServe(size){
 
     if (size === 'large'){
         return Large;
@@ -62,7 +60,7 @@ function imageServe(size){
 
     }
 
-}
+}*/
 function BirdSize(props) {
     const { cSize, disabled, ...other } = props;
     const classes = useStyles(props);
@@ -93,7 +91,7 @@ return (
             justify="space-evenly"
             alignItems="center">
                 <Grid item xs={12} sm={12} lg={12}>
-                    <img src={imageServe(props.chosenSize)} alt={props.chosenSize + " bird"}></img>
+                    <img src={"/images/" + props.chosenSize + ".png"} alt={props.chosenSize + " bird"}></img>
                 </Grid>
                 <Grid item xs={12} sm={12} lg={12}>
                     {props.chosenSize === currSizeChoice ? <CheckIcon color="{}" className={classes.icon}/> : props.chosenSize}
