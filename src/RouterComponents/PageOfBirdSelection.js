@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography'
 import TopAppBar from '../components/TopAppBar'
 import { makeStyles } from '@material-ui/core/styles';
 import BirdSelectionCard from '../components/BirdSelectionCard';
+import {useHistory} from 'react-router-dom';
 
 function PageOfBirdSelection(props) {
     const color = props.getColorChoice();
@@ -19,6 +20,13 @@ function PageOfBirdSelection(props) {
     }));
     const classes = useStyles();
 
+    const history = useHistory();
+
+    //makes sure that the user has all the neccesary info
+    if(props.getSizeChoice() == null){
+        history.push('/');
+
+    }
     const { setBirdChoice, getBirdChoice, ...rest } = props;
 
     //determines what day of the year/365 we're currently at and what season that day is in

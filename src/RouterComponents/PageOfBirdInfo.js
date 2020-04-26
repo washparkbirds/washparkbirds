@@ -23,6 +23,11 @@ function PageOfBirdInfo(props) {
     const history = useHistory();
     const { getBirdChoice, ...rest } = props;
 
+    //makes sure that the user has all the neccesary info
+    if(props.getSizeChoice() == null){
+        history.push('/');
+
+    }
     function birdLinkLoop(){
         var birdLink = "";
         for(var i = 0; i < birds.length; i++){

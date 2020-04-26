@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography'
 import TopAppBar from '../components/TopAppBar'
 import { makeStyles } from '@material-ui/core/styles';
+import {useHistory} from 'react-router-dom';
 
 
 
@@ -19,6 +20,13 @@ function PageOfColorSelection(props) {
 
     }));
     const classes = useStyles();
+    const history = useHistory();
+
+        //makes sure that the user has all the neccesary info
+        if(props.getSizeChoice() == null){
+            history.push('/');
+    
+        }
 
     const { setColorChoice, getColorChoice, ...rest } = props;
 
@@ -32,6 +40,8 @@ function PageOfColorSelection(props) {
         });
         return colorsArray;
     }
+
+
 
     return (
         <React.Fragment>

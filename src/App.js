@@ -64,10 +64,10 @@ class App extends React.Component {
       <BrowserRouter>
         <Switch>
         <Route path="/" exact component={PageOfStart}/>
-        <Route path="/color" exact render={(props) => <PageOfColorSelection colorList={this.state.colorList} getColorChoice={this.getColorChoice} setColorChoice={this.setColorChoice} />} />
+        <Route path="/color" exact render={(props) => <PageOfColorSelection colorList={this.state.colorList} getColorChoice={this.getColorChoice}  getSizeChoice={this.getSizeChoice} setColorChoice={this.setColorChoice} />} />
         <Route path="/size" exact render={(props) => <PageOfSizeSelection sizeList={this.state.sizeList} getSizeChoice={this.getSizeChoice} setSizeChoice={this.setSizeChoice} />} />
-        <Route path="/bird" exact render={(props) => <PageOfBirdSelection birdList={this.state.birdList} getBirdChoice={this.getBirdChoice} setBirdChoice={this.setBirdChoice} getColorChoice={this.getColorChoice} getSizeChoice={this.getSizeChoice} />} />
-        <Route path="/birdInfo" exact render={(props) => <PageOfBirdInfo birdList={this.state.birdList} getBirdChoice={this.getBirdChoice}/>}/>
+        <Route path="/bird" exact render={(props) => <PageOfBirdSelection birdList={this.state.birdList} getBirdChoice={this.getBirdChoice} getSizeChoice={this.getSizeChoice} setBirdChoice={this.setBirdChoice} getColorChoice={this.getColorChoice} getSizeChoice={this.getSizeChoice} />} />
+        <Route path="/birdInfo" exact render={(props) => <PageOfBirdInfo birdList={this.state.birdList} getBirdChoice={this.getBirdChoice} getSizeChoice={this.getSizeChoice}/>}/>
         </Switch>
       </BrowserRouter>
       </div>
