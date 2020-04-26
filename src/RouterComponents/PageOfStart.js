@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BirdSize from '../components/BirdSize';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
