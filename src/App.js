@@ -5,6 +5,7 @@ import PageOfStart from './RouterComponents/PageOfStart';
 import PageOfSizeSelection from './RouterComponents/PageOfSizeSelection';
 import PageOfColorSelection from './RouterComponents/PageOfColorSelection';
 import PageOfBirdSelection from './RouterComponents/PageOfBirdSelection';
+import PageOfBirdInfo from './RouterComponents/PageOfBirdInfo';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -17,15 +18,16 @@ class App extends React.Component {
     this.state = {
       color: null,
       size: null,
-      birdChoice: null,
+      bird: null,
       colorList: ['red', 'blue', 'green', 'yellow', 'orange', 'gray', 'black', 'brown', 'white'],
       sizeList: ['small', 'medium', 'large'],
-      birdList : [{bird: "robin", color: "red",}, {bird: "bluejay", color: "blue"}], //put json data array here
+      birdList : [{bird: "robin", color: "red", size: "small", spring: true}, {bird: "bluejay", color: "blue", size: "small", spring: true, link: "https://www.allaboutbirds.org/guide/blue_jay/id"}, {bird: "blue sparrow", color: "blue", size: "small", spring: false}, {bird: "blue", color: "blue", size: "small", spring: true}, {bird: "redjay", color: "red", size: "small", spring: true}], //put json data array here
     };
 
     this.setColorChoice = this.setColorChoice.bind(this);
-    this.setSizeChoice = this.setSizeChoice.bind(this);
+    this.setSizeChoice = this.setSizeChoice.bind(this); 
     this.setBirdChoice = this.setBirdChoice.bind(this);
+    this.getBirdChoice = this.getBirdChoice.bind(this);
     this.getSizeChoice = this.getSizeChoice.bind(this);
     this.getColorChoice = this.getColorChoice.bind(this);
 
@@ -51,8 +53,8 @@ class App extends React.Component {
     this.setState({bird : birdChoice});
   }
 
-  getBirdChoice(birdChoice){
-    return this.state.birdChoice
+  getBirdChoice(){
+    return this.state.bird;
   }
   
   // add header about router?
@@ -64,7 +66,8 @@ class App extends React.Component {
         <Route path="/" exact component={PageOfStart}/>
         <Route path="/color" exact render={(props) => <PageOfColorSelection colorList={this.state.colorList} getColorChoice={this.getColorChoice} setColorChoice={this.setColorChoice} />} />
         <Route path="/size" exact render={(props) => <PageOfSizeSelection sizeList={this.state.sizeList} getSizeChoice={this.getSizeChoice} setSizeChoice={this.setSizeChoice} />} />
-        <Route path="/bird" exact render={(props) => <PageOfBirdSelection birdList={this.state.birdList} getBirdChoice={this.getBirdChoice} setBirdChoice={this.setBirdChoice} />} />
+        <Route path="/bird" exact render={(props) => <PageOfBirdSelection birdList={this.state.birdList} getBirdChoice={this.getBirdChoice} setBirdChoice={this.setBirdChoice} getColorChoice={this.getColorChoice} getSizeChoice={this.getSizeChoice} />} />
+        <Route path="/birdInfo" exact render={(props) => <PageOfBirdInfo birdList={this.state.birdList} getBirdChoice={this.getBirdChoice}/>}/>
         </Switch>
       </BrowserRouter>
       </div>
