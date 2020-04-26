@@ -12,22 +12,24 @@ import Paper from '@material-ui/core/Paper';
 function PageOfBirdInfo(props) {
     const bird = props.getBirdChoice();
     const birds = props.birdList;
-    const useStyles = makeStyles(theme => ({
+    const history = useHistory();
 
+    //prevents bad backs
+    if (bird == null){
+        window.location.href="../"
+    }
+    const useStyles = makeStyles(theme => ({
+  
         bufferBar:{
             paddingTop: 80,
         },
 
     }));
     const classes = useStyles();
-    const history = useHistory();
     const { getBirdChoice, ...rest } = props;
 
     //makes sure that the user has all the neccesary info
-    if(props.getSizeChoice() == null){
-        history.push('/');
 
-    }
     function birdLinkLoop(){
         var birdLink = "";
         for(var i = 0; i < birds.length; i++){
