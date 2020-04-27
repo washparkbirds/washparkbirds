@@ -24,6 +24,10 @@ function PageOfBirdInfo(props) {
             paddingTop: 80,
         },
 
+        imageSize: {
+            width: '100%',
+         },     
+
     }));
     const classes = useStyles();
     const { getBirdChoice, ...rest } = props;
@@ -56,7 +60,7 @@ function PageOfBirdInfo(props) {
                         <React.Fragment>
                         <Paper elevation={3}>          
                             <Grid item xs={12} sm={12} lg={12}>
-                                <img src={"/images/"+ bird + ".png"} alt={props.chosenSize + " bird"}></img>
+                                <img className={classes.imageSize} src={"/images/EasternPhoebe.png"}  alt={props.chosenSize + " bird"}></img>
                                 <Typography>
                                     {bird.bird}
                                 </Typography>
@@ -67,7 +71,7 @@ function PageOfBirdInfo(props) {
                         </Paper>
                         </React.Fragment>
                         <Button variant="contained" color="primary" size="large" onClick={ () => history.push('/')}>
-                                BACK TO START
+                                BACK TO START!
                         </Button>
                     </Grid>
                 </Grid>
