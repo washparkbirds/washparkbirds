@@ -48,14 +48,17 @@ function PageOfBirdSelection(props) {
     }
     function birdCardLoop(){
         var birdsArray = birds.map(birdItem => {
-            if(birdItem.color == color && birdItem.size == size && birdItem[getSeason()] == true){
-                return (
-                    <Grid item xs={12} sm={6} lg={4}>
-                        <React.Fragment>
-                            <BirdSelectionCard chosenBird={birdItem.bird} key={birdItem.bird} getBirdChoice={getBirdChoice} setBirdChoice={setBirdChoice}></BirdSelectionCard>
-                        </React.Fragment>
-                    </Grid>
-                )
+            if(birdItem.color1 == color || birdItem.color2 == color || birdItem.color3 == color || birdItem.fcolor1 == color || birdItem.fcolor2 == color || birdItem.fcolor3 == color){
+                if(birdItem.size == size && birdItem[getSeason()] == "true"){
+                    console.log(birdItem.name+" "+birdItem.color1+" "+color);
+                    return (
+                        <Grid item xs={12} sm={6} lg={4}>
+                            <React.Fragment>
+                                <BirdSelectionCard chosenBird={birdItem.name} key={birdItem.name} getBirdChoice={getBirdChoice} setBirdChoice={setBirdChoice}></BirdSelectionCard>
+                            </React.Fragment>
+                        </Grid>
+                    )
+                }
             }
         });
         return birdsArray;
