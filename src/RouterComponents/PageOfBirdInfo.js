@@ -24,6 +24,12 @@ function PageOfBirdInfo(props) {
             paddingTop: 80,
         },
 
+        imageSize: {
+            width: '80%',
+            display: 'block',
+            margin: '0 auto',
+         },     
+
     }));
     const classes = useStyles();
     const { getBirdChoice, ...rest } = props;
@@ -56,18 +62,18 @@ function PageOfBirdInfo(props) {
                         <React.Fragment>
                         <Paper elevation={3}>          
                             <Grid item xs={12} sm={12} lg={12}>
-                                <img src={"/images/"+ bird + ".png"} alt={props.chosenSize + " bird"}></img>
+                                <img className={classes.imageSize} src={"/images/Eastern Phoebe .png"}  alt={props.chosenSize + " bird"}></img>
                                 <Typography>
                                     {bird.bird}
                                 </Typography>
-                                <Button variant="contained" color= '#FFFFFF' className={classes.root} onClick={() => clickFun()}>
+                                <Button variant="contained" color= 'green' className={classes.root} onClick={() => clickFun()}>
                                 Get more information on {bird} 
                                 </Button>
                             </Grid>
                         </Paper>
                         </React.Fragment>
                         <Button variant="contained" color="primary" size="large" onClick={ () => history.push('/')}>
-                                BACK TO START
+                                BACK TO START!
                         </Button>
                     </Grid>
                 </Grid>

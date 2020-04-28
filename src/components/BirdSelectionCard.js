@@ -38,6 +38,12 @@ const useStyles = makeStyles({
         marginBottom: '.65em',
     },
 
+    imageSize: {
+        width: '80%',
+        display: 'block',
+        margin: '0 auto',
+     },    
+
     icon: {
         //different scope here!!
         fontSize: '2em',
@@ -74,7 +80,7 @@ return (
             justify="space-evenly"
             alignItems="center">
                 <Grid item xs={12} sm={12} lg={12}>
-                    <img src={"/images/small.png"}></img>
+                    <img className={classes.imageSize} src={"/images/Eastern Phoebe .png"}></img>
                 </Grid>
                 <Grid item xs={12} sm={12} lg={12}>
                     {props.chosenBird === currBirdChoice ? <CheckIcon color="{}" className={classes.icon}/> : props.chosenBird}
