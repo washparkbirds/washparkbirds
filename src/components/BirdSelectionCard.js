@@ -72,7 +72,7 @@ export default function AdaptingHook(props) {
     function clickFun(){
         props.setBirdChoice(props.chosenBird);
         setCurrBirdChoice(props.chosenBird);
-        setTimeout(() => {history.push('/'); history.push('/birdInfo')}, 650);
+        setTimeout(() => history.push('/birdInfo'), 650);
         
     }
 
