@@ -18,6 +18,10 @@ function PageOfColorSelection(props) {
         },
 
     }));
+    if(props.getSizeChoice() == null){
+
+        window.location.href = window.location.hostname;
+}
     const classes = useStyles();
 
     const { setColorChoice, getColorChoice, ...rest } = props;

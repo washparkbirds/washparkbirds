@@ -23,9 +23,9 @@ function PageOfBirdSelection(props) {
     const history = useHistory();
 
     //makes sure that the user has all the neccesary info
-    if(props.getSizeChoice() == null){
-        history.push('/');
+    if(props.getColorChoice() == null){
 
+        window.location.assign(window.location.hostname);
     }
     const { setBirdChoice, getBirdChoice, ...rest } = props;
 

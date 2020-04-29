@@ -16,7 +16,7 @@ function PageOfBirdInfo(props) {
 
     //prevents bad backs
     if (bird == null){
-        window.location.href="../"
+        window.location.href = window.location.hostname;
     }
     const useStyles = makeStyles(theme => ({
   
@@ -48,7 +48,7 @@ function PageOfBirdInfo(props) {
     function clickFun(){
         //will nav to start page to preserve navigation w/ netlify then navigate to external page
         history.push('/');
-        window.location.assign(birdLinkLoop());
+        window.location.href = birdLinkLoop();
     }
     return (
         <React.Fragment>
