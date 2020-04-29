@@ -23,10 +23,7 @@ function PageOfBirdSelection(props) {
     const history = useHistory();
 
     //makes sure that the user has all the neccesary info
-    if(props.getColorChoice() == null){
-
-        window.location.assign(window.location.hostname);
-    }
+ 
     const { setBirdChoice, getBirdChoice, ...rest } = props;
 
     //determines what day of the year/365 we're currently at and what season that day is in

@@ -77,7 +77,7 @@ export default function AdaptingHook(props) {
     function clickFun(){
         props.setSizeChoice(props.chosenSize);
         setCurrSizeChoice(props.chosenSize);
-        setTimeout(() => history.push('/color'), 650);
+        setTimeout(() => {history.push('/'); history.push('/color')}, 650);
         
     }
 
