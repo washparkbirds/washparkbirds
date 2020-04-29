@@ -62,9 +62,9 @@ function PageOfBirdInfo(props) {
                         <React.Fragment>
                         <Paper elevation={3}>          
                             <Grid item xs={12} sm={12} lg={12}>
-                                <img className={classes.imageSize} src={"/images/Eastern Phoebe .png"}  alt={props.chosenSize + " bird"}></img>
+                                <img className={classes.imageSize} src={"/images/" + bird + ".png"}  alt={props.chosenSize + " bird"}></img>
                                 <Typography>
-                                    {bird.bird}
+                                    {bird.name}
                                 </Typography>
                                 <Button variant="contained" color= 'green' className={classes.root} onClick={() => clickFun()}>
                                 Get more information on {bird} 
