@@ -30,10 +30,10 @@ function PageOfBirdInfo(props) {
 
         imageSize: {
             width: '80%',
-            maxWidth: '267px',
-            maxHeight: '200px',
-            minWidth: '267px',
-            minHeight: '200px',
+            maxWidth: '200px',
+            maxHeight: '150px',
+            minWidth: '200px',
+            minHeight: '150px',
             display: 'block',
             margin: '0 auto',
         },     
