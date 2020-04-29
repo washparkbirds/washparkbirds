@@ -39,7 +39,7 @@ function PageOfBirdInfo(props) {
     function birdLinkLoop(){
         var birdLink = "";
         for(var i = 0; i < birds.length; i++){
-            if(birds[i].bird == bird){
+            if(birds[i].name == bird){
                 birdLink = birds[i].link;
             }
         }
