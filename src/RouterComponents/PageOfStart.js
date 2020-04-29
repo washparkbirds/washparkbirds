@@ -27,7 +27,10 @@ function PageOfStart(props) {
         color: '#ffffff',
         height: 48,
         padding: '0 30px',
-        }
+        },
+        bufferButton:{
+            paddingTop: '1em',
+        },
 
     }));
 
@@ -43,9 +46,9 @@ function PageOfStart(props) {
             justify="space-evenly"
             alignItems="center">
                 <Grid item xs={12} sm={12} lg={12}>
-                <img src={"/images/small.png"} alt="Bird"></img>
+                <img src={"/images/small.png"} alt="Bird" onClick={() => history.push('/size')}></img>
                 </Grid>
-                <Grid item xs={12} sm={12} lg={12}>
+                <Grid className={classes.bufferButton} item xs={12} sm={12} lg={12}>
                     <Button variant="contained" color= '#FFFFFF' className={classes.root} onClick={() => history.push('/size')}>
                         Start
                     </Button>
