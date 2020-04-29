@@ -55,7 +55,6 @@ function PageOfBirdInfo(props) {
     }
     function clickFun(){
         //will nav to start page to preserve navigation w/ netlify then navigate to external page
-        history.push('/');
         window.location.href = birdLinkLoop();
     }
     return (
