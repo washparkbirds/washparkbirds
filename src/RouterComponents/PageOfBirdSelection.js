@@ -23,9 +23,9 @@ function PageOfBirdSelection(props) {
     const history = useHistory();
 
     //makes sure that the user has all the neccesary info
-    if(props.getColorChoice() == null){
+    if(color == null){
 
-        window.location.href = window.location.hostname;
+        window.location.href = 'http://washparkbirds.netlify.app/';
     }
     const { setBirdChoice, getBirdChoice, ...rest } = props;
 

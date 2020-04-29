@@ -16,12 +16,16 @@ function PageOfBirdInfo(props) {
 
     //prevents bad backs
     if (bird == null){
-        window.location.href = window.location.hostname;
+        window.location.href = 'http://washparkbirds.netlify.app/';
     }
     const useStyles = makeStyles(theme => ({
   
         bufferBar:{
             paddingTop: 80,
+        },
+
+        bufferButton:{
+            paddingTop: '1em',
         },
 
         imageSize: {
@@ -32,7 +36,7 @@ function PageOfBirdInfo(props) {
             minHeight: '200px',
             display: 'block',
             margin: '0 auto',
-         },     
+        },     
 
     }));
     const classes = useStyles();
@@ -59,14 +63,14 @@ function PageOfBirdInfo(props) {
             <TopAppBar title={bird}></TopAppBar>
             <Typography className={classes.bufferBar} variant="h5" component="h2" align="center" gutterBottom={true} display="block">{bird}</Typography>
             <Grid container
-            direction="row"
+            direction="column"
             justify="center"
             alignItems="center" spacing={0}>  
-                <Grid item xs={12} sm={6} lg={4}>
+                <Grid item xs={12} sm={12} lg={12}>
                         <React.Fragment>
                         <Paper elevation={3}>          
                             <Grid item xs={12} sm={12} lg={12}>
-                                <img className={classes.imageSize} src={"/images/" + bird + ".png"}  alt={props.chosenSize + " bird"}></img>
+                                <img className={classes.imageSize} src={"/images/" + bird + ".png"}  alt={props.chosenSize + " bird"} onClick={() => clickFun()}></img>
                                 <Typography>
                                     {bird.name}
                                 </Typography>
@@ -76,8 +80,10 @@ function PageOfBirdInfo(props) {
                             </Grid>
                         </Paper>
                         </React.Fragment>
-                        <Button variant="contained" color="primary" size="large" onClick={ () => history.push('/')}>
-                                BACK TO START!
+                    </Grid>
+                    <Grid item xs={12} sm={12} lg={12} className={classes.bufferButton}>
+                    <Button variant="contained" color="primary" size="large" onClick={ () => history.push('/')}>
+                                Back To Start!
                         </Button>
                     </Grid>
                 </Grid>

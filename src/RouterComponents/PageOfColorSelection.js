@@ -11,6 +11,8 @@ import { makeStyles } from '@material-ui/core/styles';
 function PageOfColorSelection(props) {
 
     const colors = props.colorList;
+    //predefine for async
+    const size = props.getSizeChoice();
     const useStyles = makeStyles(theme => ({
 
         bufferBar:{
@@ -18,6 +20,10 @@ function PageOfColorSelection(props) {
         },
 
     }));
+    if(size == null){
+
+        window.location.href = 'http://washparkbirds.netlify.app/';
+    }
     const classes = useStyles();
 
     const { setColorChoice, getColorChoice, ...rest } = props;
