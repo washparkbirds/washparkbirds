@@ -39,6 +39,10 @@ const useStyles = makeStyles({
     },
 
     imageSize: {
+        maxWidth: '267px',
+        maxHeight: '200px',
+        minWidth: '267px',
+        minHeight: '200px',
         width: '80%',
         display: 'block',
         margin: '0 auto',
@@ -83,7 +87,7 @@ return (
                     <img className={classes.imageSize} src={"/images/" + props.chosenBird + ".png"}></img>
                 </Grid>
                 <Grid item xs={12} sm={12} lg={12}>
-                    {props.chosenBird === currBirdChoice ? <CheckIcon color="{}" className={classes.icon}/> : props.chosenBird}
+                    {props.chosenBird === currBirdChoice ? <CheckIcon className={classes.icon}/> : props.chosenBird}
                 </Grid>
             </Grid>
             }
