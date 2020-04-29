@@ -72,7 +72,7 @@
             //will nav to bird selection
             props.setColorChoice(props.chosenColor);
             setCurrColorChoice(props.chosenColor);
-            setTimeout(() =>  {history.push('/'); history.push('/bird')}, 650);
+            setTimeout(() => history.push('/bird'), 650);
             
         }
         //console.log(props.getColorChoice())

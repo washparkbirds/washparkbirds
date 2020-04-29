@@ -18,7 +18,6 @@ function PageOfColorSelection(props) {
         },
 
     }));
-
     const classes = useStyles();
 
     const { setColorChoice, getColorChoice, ...rest } = props;
