@@ -39,8 +39,8 @@ function PageOfStart(props) {
 
     return (
         <React.Fragment>
-            <TopAppBar title="Welcome to WashParkBirds"></TopAppBar>
-            <Typography className={classes.bufferBar} variant="h5" component="h2" align="center" gutterBottom={true} display="block">WashParkBirds</Typography>
+            <TopAppBar title="Start Page"></TopAppBar>
+            <Typography className={classes.bufferBar} variant="h5" component="h2" align="center" gutterBottom={true} display="block">Welcome to WashParkBirds</Typography>
             <Grid container
             direction="column"
             justify="space-evenly"
