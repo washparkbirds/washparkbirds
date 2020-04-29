@@ -39,12 +39,13 @@ const useStyles = makeStyles({
     },
 
     imageSize: {
-        maxWidth: '200px',
-        maxHeight: '150px',
+        width: '80%',
+        maxWidth: '50%',
+        maxHeight: '50%',
         minWidth: '200px',
         minHeight: '150px',
-        width: '80%',
         display: 'block',
+        overflow: 'hidden',
         margin: '0 auto',
      },    
 
