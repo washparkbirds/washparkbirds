@@ -31,13 +31,13 @@ function TopAppBar(props) {
             <AppBar position="static">
             <Toolbar>
                 <IconButton onClick={() => history.goBack()} edge="start" className={classes.backIcon} color="inherit" aria-label="back">
-                <ArrowBackIcon />        
+                <ArrowBackIcon />  <Typography variant="button">&nbsp;Back</Typography>     
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>
                 {props.title}
                 </Typography>
                 <IconButton onClick={() => history.push('/about')} edge="start" className={classes.menuButton} color="inherit" aria-label="About Us">
-                <InfoIcon />        
+                <Typography variant="button">About&nbsp;</Typography><InfoIcon />       
                 </IconButton>  
             </Toolbar>
             </AppBar>
