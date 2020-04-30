@@ -6,6 +6,7 @@ import TopAppBar from '../components/TopAppBar'
 import { makeStyles } from '@material-ui/core/styles';
 import BirdSelectionCard from '../components/BirdSelectionCard';
 import {useHistory} from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 function PageOfBirdSelection(props) {
     const color = props.getColorChoice();
@@ -13,8 +14,15 @@ function PageOfBirdSelection(props) {
     const birds = props.birdList;
     const useStyles = makeStyles(theme => ({
 
-        bufferBar:{
-            paddingTop: 80,
+        bufferButton:{
+            marginTop: 40,
+
+        },
+
+        topBar:{
+            textTransform: 'capitalize',
+            paddingTop: 40,
+
         },
 
     }));
@@ -66,14 +74,18 @@ function PageOfBirdSelection(props) {
 
     return (
         <React.Fragment>
-            <TopAppBar title="Bird Type"></TopAppBar>
-            <Typography className={classes.bufferBar} variant="h5" component="h2" align="center" gutterBottom={true} display="block">What bird did you see?</Typography>
+            <TopAppBar className={classes.topBar} title={"What Bird Did You See?"}></TopAppBar>
+            <Typography className={classes.topBar} variant="h5" component="h2" align="center" gutterBottom={true} display="block">{props.getSizeChoice() + ' Birds with ' + props.getColorChoice() + ' coloring'}</Typography>
             <Grid container
             direction="row"
             justify="center"
             alignItems="center" spacing={0}>
                 {birdCardLoop()}
+                <Grid item xs={12} sm={6} lg={4}>
+                </Grid>
             </Grid>
+
+            <Button variant="contained" color="secondary" onClick={() => history.goBack()} className={classes.bufferButton}>Dont See Your Bird? Click Here to Go Back</Button>
         </React.Fragment>
 
         

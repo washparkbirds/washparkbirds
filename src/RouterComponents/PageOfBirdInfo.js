@@ -21,7 +21,7 @@ function PageOfBirdInfo(props) {
     const useStyles = makeStyles(theme => ({
   
         bufferBar:{
-            paddingTop: 80,
+            paddingTop: 40,
         },
 
         bufferButton:{

@@ -3,33 +3,21 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography'
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 import {useHistory} from 'react-router-dom';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import Button from '@material-ui/core/Button';
+import InfoIcon from '@material-ui/icons/Info';
 
 const useStyles = makeStyles(theme => ({
     root: {
-    flexGrow: 1,
-
+        flexGrow: 1,
     },
-
+    backButton: {
+        marginRight: theme.spacing(2),
+    },
     title: {
-        position: 'absolute',
-        zIndex: -1, //lets back button be clicked
-        top: 'auto',
-        left: 0,
-        right: 0,
-        margin: '',
-
-    },
-    appBar: {
-        top: 'auto',
-    },
-    buffer:{
-        paddingTop: 40,
-    },
-    backIcon:{
-        marginRight: '.3em',
+        flexGrow: 1,
     },
 }));
 
@@ -39,14 +27,21 @@ function TopAppBar(props) {
     
     
     return (
-        <div className={classes.root}>
-        <AppBar position="fixed" className={classes.appBar}>
-            <Toolbar id="back-to-top-anchor">
-            <Button color="inherit" onClick={() => history.goBack()}><ArrowBackIcon className={classes.backIcon}></ArrowBackIcon>Back</Button>
-            <Typography className={classes.title}variant={"subtitle1"}>{props.title}</Typography>
+        <React.Fragment className={classes.root}>
+            <AppBar position="static">
+            <Toolbar>
+                <IconButton onClick={() => history.goBack()} edge="start" className={classes.backIcon} color="inherit" aria-label="back">
+                <ArrowBackIcon />        
+                </IconButton>
+                <Typography variant="h6" className={classes.title}>
+                {props.title}
+                </Typography>
+                <IconButton onClick={() => history.push('/about')} edge="start" className={classes.menuButton} color="inherit" aria-label="About Us">
+                <InfoIcon />        
+                </IconButton>  
             </Toolbar>
-        </AppBar>
-    </div>
+            </AppBar>
+        </React.Fragment>
     );
     }
 

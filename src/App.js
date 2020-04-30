@@ -6,8 +6,8 @@ import PageOfSizeSelection from './RouterComponents/PageOfSizeSelection';
 import PageOfColorSelection from './RouterComponents/PageOfColorSelection';
 import PageOfBirdSelection from './RouterComponents/PageOfBirdSelection';
 import PageOfBirdInfo from './RouterComponents/PageOfBirdInfo';
+import PageOfAbout from './RouterComponents/PageOfAbout';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -183,6 +183,8 @@ class App extends React.Component {
         <Route path="/size" exact render={(props) => <PageOfSizeSelection sizeList={this.state.sizeList} getSizeChoice={this.getSizeChoice} setSizeChoice={this.setSizeChoice} />} />
         <Route path="/bird" exact render={(props) => <PageOfBirdSelection birdList={this.state.birdList} getBirdChoice={this.getBirdChoice} getSizeChoice={this.getSizeChoice} setBirdChoice={this.setBirdChoice} getColorChoice={this.getColorChoice} />} />
         <Route path="/birdInfo" exact render={(props) => <PageOfBirdInfo birdList={this.state.birdList} getBirdChoice={this.getBirdChoice} getSizeChoice={this.getSizeChoice}/>}/>
+        <Route path="/about" exact render={(props) => <PageOfAbout birdList={this.state.birdList} getBirdChoice={this.getBirdChoice} getSizeChoice={this.getSizeChoice}/>}/>
+
         </Switch>
       </BrowserRouter>
       </div>

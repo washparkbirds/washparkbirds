@@ -9,6 +9,8 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import {useHistory} from 'react-router-dom';
 
+
+
 function PageOfStart(props) {
 
     
@@ -18,7 +20,13 @@ function PageOfStart(props) {
             paddingTop: 200,
         },
 
-        root:{
+        stickyBottom: {
+            width: '100%',
+            position: 'fixed',
+            bottom: 0,
+        },
+
+        button:{
         background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
         minWidth: '100%',
         border: 0,
@@ -39,8 +47,8 @@ function PageOfStart(props) {
 
     return (
         <React.Fragment>
-            <TopAppBar title="Start Page"></TopAppBar>
-            <Typography className={classes.bufferBar} variant="h5" component="h2" align="center" gutterBottom={true} display="block">Welcome to WashPark Birds</Typography>
+            <TopAppBar title="WashPark Birds"></TopAppBar>
+            <Typography className={classes.bufferBar} variant="h5" component="h2" align="center" gutterBottom={true} display="block">Identify the Birds of Washington Park</Typography>
             <Grid container
             direction="column"
             justify="space-evenly"
@@ -49,12 +57,11 @@ function PageOfStart(props) {
                 <img src={"/images/small.png"} alt="Bird" onClick={() => history.push('/size')}></img>
                 </Grid>
                 <Grid className={classes.bufferButton} item xs={12} sm={12} lg={12}>
-                    <Button variant="contained" color= '#FFFFFF' className={classes.root} onClick={() => history.push('/size')}>
+                    <Button variant="contained" color= '#FFFFFF' className={classes.button} onClick={() => history.push('/size')}>
                         Start
                     </Button>
                 </Grid>
             </Grid>
-            <br></br>
         </React.Fragment>
 
         

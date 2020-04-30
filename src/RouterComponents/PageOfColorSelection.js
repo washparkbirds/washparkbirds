@@ -16,7 +16,7 @@ function PageOfColorSelection(props) {
     const useStyles = makeStyles(theme => ({
 
         bufferBar:{
-            paddingTop: 80,
+            paddingTop: 40,
         },
 
     }));
@@ -43,7 +43,7 @@ function PageOfColorSelection(props) {
     return (
         <React.Fragment>
             <TopAppBar title="Bird Color"></TopAppBar>
-            <Typography className={classes.bufferBar} variant="h5" component="h2" align="center" gutterBottom={true} display="block">Please choose one color:</Typography>
+            <Typography className={classes.bufferBar} variant="h5" component="h2" align="center" gutterBottom={true} display="block">Please choose one main color:</Typography>
             <Grid container
             direction="row"
             justify="space-evenly"
