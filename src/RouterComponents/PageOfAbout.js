@@ -73,7 +73,7 @@ function PageOfAbout(props) {
                     </Grid>
                     <Grid className={classes.grid} item xs={12} sm={12} lg={12}>
                         <Typography className={classes.bufferBottom} variant="p" component="p">
-                        Click an image below to learn more about WashPA Outdoors Co:
+                        Click an image below to learn more about WashPA Outdoors Co.:
                         </Typography>
                             <IconButton className={classes.bufferBottom} onClick={() => {window.location.href = 'https://www.facebook.com/washpaoutdoors/';}} edge="start" className={classes.menuButton} color="inherit" aria-label="About Us">
                                 <FacebookIcon>Facebook</FacebookIcon>&nbsp;Facebook
