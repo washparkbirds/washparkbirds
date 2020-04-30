@@ -20,8 +20,8 @@ function PageOfAbout(props) {
 
     const useStyles = makeStyles(theme => ({
 
-        bufferBar:{
-            paddingTop: 40,
+        bufferBottom:{
+            paddingBottom: 10,
         },
         logo:{
             maxWidth: '250px',
@@ -64,7 +64,7 @@ function PageOfAbout(props) {
                     <img className={classes.logo}src={"/images/WashPA Outdoors Co.png"} alt="Bird" ></img>
                     </Grid>
                     <Grid item xs={12} sm={12} lg={12}>
-                        <Typography>
+                        <Typography variant="p" component="p">
                             WashPark Birds is a beginner-friendly bird identification application for Washington, PA's parks.
                             With the application, you can explore to see the many types of birds that visit Washington park!
                             The app was made for WashPA Outdoors Co., an organization dedicated to preserving Washington PA's local parks
@@ -72,18 +72,15 @@ function PageOfAbout(props) {
                         </Typography>
                     </Grid>
                     <Grid className={classes.grid} item xs={12} sm={12} lg={12}>
-                        <Typography>
-                        To learn more about WashPA Outdoors Co. click on any of the images below.<br></br><br></br>
+                        <Typography className={classes.bufferBottom} variant="p" component="p">
+                        Click an image below to learn more about WashPA Outdoors Co:
                         </Typography>
-
-                            <IconButton onClick={() => {window.location.href = 'https://www.facebook.com/washpaoutdoors/';}} edge="start" className={classes.menuButton} color="inherit" aria-label="About Us">
+                            <IconButton className={classes.bufferBottom} onClick={() => {window.location.href = 'https://www.facebook.com/washpaoutdoors/';}} edge="start" className={classes.menuButton} color="inherit" aria-label="About Us">
                                 <FacebookIcon>Facebook</FacebookIcon>&nbsp;Facebook
                             </IconButton>
-                            <br></br>
-                            <IconButton onClick={() => {window.location.href = 'https://www.instagram.com/washpaoutdoors/';}} edge="start" className={classes.menuButton} color="inherit" aria-label="About Us">
+                            <IconButton className={classes.bufferBottom} onClick={() => {window.location.href = 'https://www.instagram.com/washpaoutdoors/';}} edge="start" className={classes.menuButton} color="inherit" aria-label="About Us">
                                 <InstagramIcon></InstagramIcon>&nbsp;Instagram
                             </IconButton>
-                            <br></br>
                             <IconButton onClick={() => {window.location.href = 'https://washpaoutdoors.wixsite.com/washpa';}} edge="start" className={classes.menuButton} color="inherit" aria-label="About Us">
                                 <WebIcon></WebIcon>&nbsp;Website
                             </IconButton>
