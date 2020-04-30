@@ -89,7 +89,7 @@ function PageOfBirdSelection(props) {
                 </Grid>
             </Grid>
 
-            <Button variant="contained" color="secondary" onClick={() => history.goBack()} className={classes.bufferButton}>Dont See Your Bird? Click Here to Go Back</Button>
+            <Button variant="contained" color="secondary" onClick={() => history.push('/')} className={classes.bufferButton}>Dont See Your Bird? Click Here To Restart</Button>
         </React.Fragment>
 
         
