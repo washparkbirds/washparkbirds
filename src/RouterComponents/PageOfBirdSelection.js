@@ -16,13 +16,12 @@ function PageOfBirdSelection(props) {
 
         bufferButton:{
             marginTop: 40,
-
+            marginBottom: 40,
         },
 
         topBar:{
             textTransform: 'capitalize',
             paddingTop: 40,
-
         },
 
     }));
@@ -76,7 +75,7 @@ function PageOfBirdSelection(props) {
         <React.Fragment>
             <TopAppBar className={classes.topBar} title={"Bird Type"}></TopAppBar>
             <Typography className={classes.topBar} variant="h5" component="h2" align="center" gutterBottom={true} display="block">{"What Bird Do You See?"}</Typography>
-            <Typography className={classes.topBar} variant="subtitle2" component="p" align="center" gutterBottom={true} display="block">{props.getSizeChoice() + ' Birds with ' + props.getColorChoice() + ' coloring'}</Typography>
+            <Typography variant="subtitle2" component="p" align="center" gutterBottom={true} display="block">{props.getSizeChoice() + ' Birds with ' + props.getColorChoice() + ' coloring'}</Typography>
 
             <Grid container
             direction="row"
