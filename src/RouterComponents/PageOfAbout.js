@@ -10,7 +10,11 @@ import Paper from '@material-ui/core/Paper';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import WebIcon from '@material-ui/icons/Web';
-import IconButton from '@material-ui/core/IconButton'
+import IconButton from '@material-ui/core/IconButton';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 
@@ -34,6 +38,7 @@ function PageOfAbout(props) {
             marginTop: 40,
             padding: 40,
             textAlign: 'left',
+            marginBottom: 40,
 
         },
         grid:{
@@ -85,6 +90,25 @@ function PageOfAbout(props) {
                                 <WebIcon></WebIcon>&nbsp;Website
                             </IconButton>
                     </Grid>
+                    <Grid className={classes.grid} item xs={12} sm={12} lg={12}>
+                    <ExpansionPanel>
+                        <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                        >
+                        <Typography className={classes.heading}>Attributions:</Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                        <Typography>
+                            This app features three emoji images (red bird, parrot, turkey) part of the Twemoji project by Twitter, available under a Creative Commons 4.0 International license.
+                        </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+
+                    </Grid>
+
+
                 </Grid>
                 </Paper>
             </React.Fragment>
