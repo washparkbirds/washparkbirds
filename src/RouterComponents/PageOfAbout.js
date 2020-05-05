@@ -97,7 +97,7 @@ function PageOfAbout(props) {
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                         >
-                        <Typography className={classes.heading}>Attributions:</Typography>
+                        <Typography className={classes.heading}>Credits and Attributions:</Typography>
                         </ExpansionPanelSummary>
                         <ExpansionPanelDetails>
                         <Typography>
