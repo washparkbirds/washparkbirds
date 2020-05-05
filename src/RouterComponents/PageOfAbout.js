@@ -101,6 +101,9 @@ function PageOfAbout(props) {
                         </ExpansionPanelSummary>
                         <ExpansionPanelDetails>
                         <Typography>
+                            Special thanks to Dr. Sayre Greenfield and Lauren Conkle who created the document "Washington Park Birds: Washington, Pennsylvania A Checklist of Birds and their Seasonal Abundance" this provided the foundation for our dataset.
+                            <br></br>
+                            <br></br>
                             This app features three emoji images (red bird, parrot, turkey) part of the Twemoji project by Twitter, available under a Creative Commons 4.0 International license.
                         </Typography>
                         </ExpansionPanelDetails>
