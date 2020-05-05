@@ -23,7 +23,7 @@ class App extends React.Component {
       sizeList: ['small', 'medium', 'large'],
       birdList : [
         {name: "Canada Goose ",size: "large",spring: "true",summer: "false",fall: "true",winter: "false",color1: "brown",color2: "black",color3: "white",fcolor1: "",fcolor2: "",fcolor3: "",link: "https://www.allaboutbirds.org/guide/Canada_Goose/id"},
-        {name: "Mallard ",size: "large ",spring: "true",summer: "false",fall: "true",winter: "true",color1: "gray",color2: "blue",color3: "black",fcolor1: "gray",fcolor2: "blue",fcolor3: "black(when breeding males have a dark green head  and bright yellow bill",link: "https://www.allaboutbirds.org/guide/Mallard/id"},
+        {name: "Mallard ",size: "large ",spring: "true",summer: "false",fall: "true",winter: "true",color1: "gray",color2: "blue",color3: "black",fcolor1: "gray",fcolor2: "blue",fcolor3: "green",link: "https://www.allaboutbirds.org/guide/Mallard/id"},
         {name: "Wild Turkey ",size: "large",spring: "false",summer: "false",fall: "false",winter: "false",color1: "brown",color2: "black",color3: "red",fcolor1: "",fcolor2: "",fcolor3: "",link: "https://www.allaboutbirds.org/guide/Wild_Turkey/id"},
         {name: "Rock Pigeon ",size: "medium",spring: "false",summer: "false",fall: "false",winter: "false",color1: "gray",color2: "blue",color3: "green",fcolor1: "",fcolor2: "",fcolor3: "",link: "https://www.allaboutbirds.org/guide/Rock_Pigeon/id"},
         {name: "Mourning Dove ",size: "small",spring: "true",summer: "true",fall: "true",winter: "false",color1: "brown",color2: "yellow",color3: "black (spots)",fcolor1: "",fcolor2: "",fcolor3: "",link: "https://www.allaboutbirds.org/guide/Mourning_Dove/id"},
