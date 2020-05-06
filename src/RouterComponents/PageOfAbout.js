@@ -69,7 +69,7 @@ function PageOfAbout(props) {
                     <img className={classes.logo}src={"/images/WashPA Outdoors Co.png"} alt="Bird" ></img>
                     </Grid>
                     <Grid item xs={12} sm={12} lg={12}>
-                        <Typography variant="p" component="p">
+                        <Typography>
                             WashPark Birds is a beginner-friendly bird identification application for Washington, PA's parks.
                             With the application, you can explore to see the many types of birds that visit Washington park!
                             The app was made for WashPA Outdoors Co., an organization dedicated to preserving Washington PA's local parks
@@ -77,7 +77,7 @@ function PageOfAbout(props) {
                         </Typography>
                     </Grid>
                     <Grid className={classes.grid} item xs={12} sm={12} lg={12}>
-                        <Typography className={classes.bufferBottom} variant="p" component="p">
+                        <Typography className={classes.bufferBottom}>
                         Click an image below to learn more about WashPA Outdoors Co.:
                         </Typography>
                             <IconButton className={classes.bufferBottom} onClick={() => {window.location.href = 'https://www.facebook.com/washpaoutdoors/';}} edge="start" className={classes.menuButton} color="inherit" aria-label="About Us">

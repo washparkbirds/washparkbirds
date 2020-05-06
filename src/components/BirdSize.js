@@ -94,7 +94,7 @@ return (
                     <img src={"/images/" + props.chosenSize + ".png"} alt={props.chosenSize + " bird"}></img>
                 </Grid>
                 <Grid item xs={12} sm={12} lg={12}>
-                    {props.chosenSize === currSizeChoice ? <CheckIcon color="{}" className={classes.icon}/> : props.chosenSize}
+                    {props.chosenSize === currSizeChoice ? <CheckIcon className={classes.icon}/> : props.chosenSize}
                 </Grid>
             </Grid>
             }
