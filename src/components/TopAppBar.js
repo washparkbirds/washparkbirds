@@ -27,7 +27,7 @@ function TopAppBar(props) {
     
     
     return (
-        <React.Fragment className={classes.root}>
+        <div className={classes.root}>
             <AppBar position="static">
             <Toolbar>
                 <IconButton onClick={() => history.goBack()} edge="start" className={classes.backIcon} color="inherit" aria-label="back">
@@ -41,7 +41,7 @@ function TopAppBar(props) {
                 </IconButton>  
             </Toolbar>
             </AppBar>
-        </React.Fragment>
+        </div>
     );
     }
 

@@ -74,7 +74,7 @@ function PageOfBirdInfo(props) {
                                 <Typography>
                                     {bird.name}
                                 </Typography>
-                                <Button variant="contained" color= 'green' className={classes.root} onClick={() => clickFun()}>
+                                <Button variant="contained" className={classes.root} onClick={() => clickFun()}>
                                 Get more information on {bird} 
                                 </Button>
                             </Grid>

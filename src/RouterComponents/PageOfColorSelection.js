@@ -1,6 +1,5 @@
 import React from 'react';
 import ColorCard from '../components/ColorCard';
-import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography'
 import TopAppBar from '../components/TopAppBar'
@@ -31,7 +30,7 @@ function PageOfColorSelection(props) {
     function colorCardLoop(){
         var colorsArray = colors.map(color => {
             return (
-                <Grid item xs={12} sm={6} lg={4}>
+                <Grid item xs={12} sm={6} lg={4} key={color}>
                     <ColorCard chosenColor={color} key={color} getColorChoice={getColorChoice} setColorChoice={setColorChoice}></ColorCard>
                 </Grid>
             )

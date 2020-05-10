@@ -1,11 +1,8 @@
-import React, { Component } from 'react';
-import BirdSize from '../components/BirdSize';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import TopAppBar from '../components/TopAppBar'
 import Typography from '@material-ui/core/Typography'
-import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import {useHistory} from 'react-router-dom';
 
@@ -57,7 +54,7 @@ function PageOfStart(props) {
                 <img src={"/images/small.png"} alt="Bird" onClick={() => history.push('/size')}></img>
                 </Grid>
                 <Grid className={classes.bufferButton} item xs={12} sm={12} lg={12}>
-                    <Button variant="contained" color= '#FFFFFF' className={classes.button} onClick={() => history.push('/size')}>
+                    <Button variant="contained" className={classes.button} onClick={() => history.push('/size')}>
                         Start
                     </Button>
                 </Grid>

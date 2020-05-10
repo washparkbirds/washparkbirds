@@ -27,7 +27,7 @@ function PageOfSizeSelection(props) {
     function birdSizeLoop(){
         var sizesArray = sizes.map(size => {
             return (
-                <Grid item xs={12} sm={8}>
+                <Grid key={size} item xs={12} sm={8}>
                     <BirdSize chosenSize={size} key={size} getSizeChoice={getSizeChoice} setSizeChoice={setSizeChoice}></BirdSize>
                 </Grid>
             )
