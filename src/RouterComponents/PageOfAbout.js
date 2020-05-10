@@ -47,6 +47,7 @@ function PageOfAbout(props) {
         },
         typMargin:{
             marginBottom: '1em',
+            overflow: 'auto',
         },
         grid:{
             marginTop: 40,
@@ -124,7 +125,7 @@ function PageOfAbout(props) {
                         <Typography className={classes.heading}>Image Credits and Attributions:</Typography>
                         </ExpansionPanelSummary>
                         <ExpansionPanelDetails className={classes.flexCol}>
-                            <Typography>
+                            <Typography className={classes.typMargin}>
                             Canada Goose 
                             <br></br>Author: USFWS Mountain-Prairie
                             <br></br>Source: Canada goose on Seedskadee NWR
@@ -132,7 +133,7 @@ function PageOfAbout(props) {
                             <br></br>Website: https://commons.wikimedia.org/wiki/File:Canada_goose_on_Seedskadee_NWR_(27826185489).jpg
                             </Typography>
                             <br></br>
-                            <Typography>
+                            <Typography className={classes.typMargin}>
                             Mallard 
                             <br></br>Author: Richard Bartz 
                             <br></br>Source: Own work
